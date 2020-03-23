@@ -122,7 +122,7 @@ contract FreelancerAgreement {
     {
         require(_partyAddress != address(0), "Address cannot be empty");
         require(freelancer.partyAddress == address(0), "Details have already been set");
-        customer = Party(_partyAddress, Roles.Freelancer, _name, _countryOfOperation, _postalAddress, _fiscalIdentificationNumber);
+        freelancer = Party(_partyAddress, Roles.Freelancer, _name, _countryOfOperation, _postalAddress, _fiscalIdentificationNumber);
     }
 
     function signAgreement() public hasState(State.Unsigned) isParty(msg.sender) {
