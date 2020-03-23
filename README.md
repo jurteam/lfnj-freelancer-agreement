@@ -40,7 +40,7 @@ Function for adding Customer's details.
 4. **_postalAddress** of the customer. (String)
 5. **_fiscalIdentificationNumber** of the customer. (String)
 
-### 1. Add freelancer's details
+### 2. Add freelancer's details
 ```
 addFreelancerDetails(
         address _partyAddress,
@@ -57,7 +57,7 @@ Function for adding Freelancer's details.
 4. **_postalAddress** of the freelancer. (String)
 5. **_fiscalIdentificationNumber** of the freelancer. (String)
 
-3. Sign Agreement
+### 3. Sign Agreement
 ```
 signAgreement()
 ```
@@ -65,20 +65,20 @@ Function used by both parties to sign the agreement. This function should only b
 In case of customer, it is required that the customer should first approve the agreement contract to transfer tokens on her behalf.
 Please refer to the preparatory material to understand how.
 
-4. Deliver the project
+### 4. Deliver the project
 ```
 markProjectComplete()
 ```
 This function is called by the freelancer to update the customer on the delivery of the project. It automatically calculates the late
 delivery penalty if any, and updates the payout.
 
-5. Release the payout
+### 5. Release the payout
 ```
 releasePayout()
 ```
 This function can only be called by the customer to release the payment for the freelancer.
 
-6. Grant a license
+### 6. Grant a license
 ```
 uploadLicence(bytes32 _licenseHash, string _name)
 ```
