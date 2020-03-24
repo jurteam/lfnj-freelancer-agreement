@@ -156,9 +156,6 @@ library SafeMath {
 }
 
 
-
-
-
 /*
  * @dev Provides information about the current execution context, including the
  * sender of the transaction and its data. While these are generally available
@@ -184,7 +181,6 @@ contract Context {
         return msg.data;
     }
 }
-
 
 
 /**
@@ -261,7 +257,6 @@ interface IERC20 {
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
-
 
 
 /**
@@ -490,7 +485,6 @@ contract ERC20 is Context, IERC20 {
 }
 
 
-
 contract FreelancerAgreement {
     using SafeMath for uint;
     //Initialise state
@@ -541,7 +535,6 @@ contract FreelancerAgreement {
     event ContractSigned(address _signer);
     event ProjectDelievered();
     event StateChange(State state, State _state, uint _timestamp);
-
 
     modifier hasState(State _state) {
         require(state == _state, "Invalid state");

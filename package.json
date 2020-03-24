@@ -1,13 +1,13 @@
 {
   "name": "freelancer-secure-commercial-agreement",
   "version": "1.0.0",
-  "description": "Smart contracts for freelancer's agreement with a customer",
+  "description": "Smart contracts for a freelancer's agreement with a customer",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "GPL 3.0",
   "dependencies": {
     "openzeppelin-solidity": "^2.5.0"
   }

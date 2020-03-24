@@ -1,6 +1,5 @@
 pragma solidity ^0.4.23;
 
-
 /**
  * @title ERC20Basic
  * @dev Simpler version of ERC20 interface
@@ -13,8 +12,6 @@ contract ERC20Basic {
   event Transfer(address indexed from, address indexed to, uint256 value);
 }
 
-
-
 /**
  * @title Ownable
  * @dev The Ownable contract has an owner address, and provides basic authorization control
@@ -23,13 +20,11 @@ contract ERC20Basic {
 contract Ownable {
   address public owner;
 
-
   event OwnershipRenounced(address indexed previousOwner);
   event OwnershipTransferred(
     address indexed previousOwner,
     address indexed newOwner
   );
-
 
   /**
    * @dev The Ownable constructor sets the original `owner` of the contract to the sender
@@ -73,18 +68,6 @@ contract Ownable {
     owner = _newOwner;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /**
@@ -138,7 +121,6 @@ library SafeMath {
 }
 
 
-
 /**
  * @title Basic token
  * @dev Basic version of StandardToken, with no allowances.
@@ -184,10 +166,6 @@ contract BasicToken is ERC20Basic {
 }
 
 
-
-
-
-
 /**
  * @title ERC20 interface
  * @dev see https://github.com/ethereum/EIPs/issues/20
@@ -208,7 +186,6 @@ contract ERC20 is ERC20Basic {
 }
 
 
-
 /**
  * @title Standard ERC20 token
  *
@@ -219,7 +196,6 @@ contract ERC20 is ERC20Basic {
 contract StandardToken is ERC20, BasicToken {
 
   mapping (address => mapping (address => uint256)) internal allowed;
-
 
   /**
    * @dev Transfer tokens from one address to another
@@ -332,8 +308,6 @@ contract StandardToken is ERC20, BasicToken {
 }
 
 
-
-
 /**
  * @title Mintable token
  * @dev Simple ERC20 Token example, with mintable token creation
@@ -345,7 +319,6 @@ contract MintableToken is StandardToken, Ownable {
   event MintFinished();
 
   bool public mintingFinished = false;
-
 
   modifier canMint() {
     require(!mintingFinished);
