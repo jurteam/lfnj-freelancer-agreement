@@ -505,7 +505,7 @@ contract FreelancerAgreement {
 
     //Token for escrow & voting
     ERC20 public jurToken;
-    bytes32 agreementHash;
+    bytes agreementHash;
 
     struct Party {
         address partyAddress;
@@ -531,7 +531,7 @@ contract FreelancerAgreement {
 
     event LicenseAdded(string _name, address _owner);
     event PaymentReleased(uint _payout, uint _timestamp);
-    event ContractCreated(bytes32 _agreementHash);
+    event ContractCreated(bytes _agreementHash);
     event ContractSigned(address _signer);
     event ProjectDelievered();
     event StateChange(State state, State _state, uint _timestamp);
@@ -555,7 +555,7 @@ contract FreelancerAgreement {
     //All are in days.
     constructor(
         address _jurToken,
-        bytes32 _agreementHash,
+        bytes _agreementHash,
         uint _submittionDeadline,
         uint _contractValidity,
         uint _contractWarranty,
