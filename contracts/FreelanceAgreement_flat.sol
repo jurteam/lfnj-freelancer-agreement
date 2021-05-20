@@ -555,7 +555,7 @@ contract FreelancerAgreement {
     //All are in days.
     constructor(
         address _jurToken,
-        bytes _agreementHash,
+        bytes memory _agreementHash,
         uint _submittionDeadline,
         uint _contractValidity,
         uint _contractWarranty,
